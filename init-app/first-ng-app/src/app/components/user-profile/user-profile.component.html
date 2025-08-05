@@ -1,0 +1,29 @@
+<!-- <p>user-profile works!</p> -->
+<!-- interpolation -->
+<!-- <p>Name: {{name}} | Status: {{status}} | Salary: {{salary}}</p> -->
+
+<!-- <div>User Value- {{inputValue}}</div> -->
+<!-- <input type="text" [value]="inputValue" (input) = "onChange($event)"> -->
+<!-- <input type="text" [(ngModel)]="inputValue">
+<button [disabled] = "isButtonDisabled">Click me</button> -->
+
+<!-- <div>
+
+    @for(user of users; track user.name){
+        @if(user.salary > 42000){
+            <p>Name: {{user.name}} | Status: {{user.status === "single" ? "single" : "coder"}} | Salary: {{user.salary}}</p>
+        }
+        @else{
+            <p>Name: {{user.name}} | Status: {{user.status === "single" ? "single" : "coder"}} | Salary: "Hidden"</p>
+
+        }
+    }
+
+</div> -->
+
+<h1 #myHeading>Name- {{name | uppercase}} | 
+    Status- {{isSingle ? "Single" : "Coder"}} |
+     Salary- {{salary | currency:"INR"}}
+      Contact- {{contact | countryCode: "1" : "2"}}
+    </h1>
+<button appHighlight (click)="sendData()">Send Data</button>
